@@ -42,6 +42,7 @@ int main()
 	fclose(pFile);
 	/* 装载内存当中的DLL文件 */
 	hDLL->MemLoadLibrary(&*buffer, lSize);
+	hDLL->MemFreeLibrary();
 nPause:
 	/* 成功或者失败最终都会到这一步 */
 	system("pause");
